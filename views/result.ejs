@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stable Diffusion API Result</title>
+</head>
+<body>
+  <h1>Result</h1>
+  <% if (imageUrl) { %>
+    <img src="<%= imageUrl %>" alt="Generated Image">
+    <form action="/" method="post">
+      <label for="text">Ikke tilfreds? Prøv igen:</label>
+      <input type="text" id="text" name="text" value="<%= userInputValue %>" required>
+      <button type="submit">Submit</button>
+    </form>
+    <form action="/saveImage" method="post">
+      <button type="submit">Tilfreds</button>
+    </form>
+    
+  <% } else { %>
+    <p>No image available.</p>
+  <% } %>
+</body>
+</html>

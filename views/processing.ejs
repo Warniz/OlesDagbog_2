@@ -1,0 +1,15 @@
+<head>
+    <title>Stable Diffusion API Result</title>
+  </head>
+  <body>
+    <h1>Processing</h1>
+    <% if (processing) { %>
+      <img src="https://www.superiorlawncareusa.com/wp-content/uploads/2020/05/loading-gif-png-5.gif" style="max-width:25vw" alt="Generated Image">
+    <% } %>
+    <% if (processing && eta) { %>
+        <p>Billedet er på vej. Skulle gerne være her om <%= eta %> sekunder</p>
+    <% } %>
+      
+  </body>
+  </html>
+  
